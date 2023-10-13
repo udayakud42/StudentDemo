@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -14,13 +15,15 @@ import java.util.Date;
 @NoArgsConstructor
 @Document(collection = "StudentDemo")
 public class Student {
+    
     @Id
     private String id;
-    private int studentId;
+    private Long studentId;
     private String firstName;
     private String middleName;
     private String lastName;
     private Date dOB;
     private String eMail;
     private String mobileNumber;
+
 }
